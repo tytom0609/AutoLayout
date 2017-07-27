@@ -21,24 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h5E-ax-RsC">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyE-ax-a1R">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="Lze-ZX-SF3" kind="show" id="1Ju-yv-Z8w"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyE-ax-a1R">
+                                <rect key="frame" x="134" y="269" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Survive"/>
+                                <connections>
+                                    <segue destination="Lze-ZX-SF3" kind="show" id="1Ju-yv-Z8w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="h5E-ax-RsC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a87-M4-It2"/>
-                            <constraint firstItem="h5E-ax-RsC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h8M-iB-mya"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -139,14 +131,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1oG-zJ-cQh">
-                                <rect key="frame" x="16" y="28" width="288" height="520"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1oG-zJ-cQh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="524" id="Z1s-90-GtZ"/>
+                                </constraints>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ph-Ue-dgb">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="reply" id="4C0-eb-b83">
+                                        <connections>
+                                            <segue destination="Lze-ZX-SF3" kind="show" id="DFW-iB-dfv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1oG-zJ-cQh" firstAttribute="centerX" secondItem="JcL-dW-OT7" secondAttribute="centerX" id="0RJ-Cn-rcU"/>
-                            <constraint firstItem="1oG-zJ-cQh" firstAttribute="centerY" secondItem="JcL-dW-OT7" secondAttribute="centerY" id="BCc-UM-TRw"/>
+                            <constraint firstAttribute="trailing" secondItem="1oG-zJ-cQh" secondAttribute="trailing" id="Arc-DL-V80"/>
+                            <constraint firstItem="1oG-zJ-cQh" firstAttribute="leading" secondItem="JcL-dW-OT7" secondAttribute="leading" id="UdA-e8-mMw"/>
+                            <constraint firstItem="1oG-zJ-cQh" firstAttribute="leading" secondItem="5ph-Ue-dgb" secondAttribute="leading" id="XlR-BU-yzc"/>
+                            <constraint firstItem="1oG-zJ-cQh" firstAttribute="bottom" secondItem="5ph-Ue-dgb" secondAttribute="top" id="h39-W0-obZ"/>
+                            <constraint firstItem="1oG-zJ-cQh" firstAttribute="trailing" secondItem="5ph-Ue-dgb" secondAttribute="trailing" id="iQB-cG-jbH"/>
+                            <constraint firstItem="1oG-zJ-cQh" firstAttribute="top" secondItem="JcL-dW-OT7" secondAttribute="top" id="m7w-BH-jdA"/>
                         </constraints>
                     </view>
                     <connections>
@@ -179,4 +188,7 @@
     <resources>
         <image name="Unknown-1.jpeg" width="128" height="114"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1Ju-yv-Z8w"/>
+    </inferredMetricsTieBreakers>
 </document>
