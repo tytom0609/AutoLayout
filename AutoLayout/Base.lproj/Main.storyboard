@@ -78,7 +78,11 @@
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Locations" id="6i8-gy-vOk"/>
+                                    <barButtonItem title="Locations" id="6i8-gy-vOk">
+                                        <connections>
+                                            <segue destination="zU8-Bz-NwX" kind="show" id="aCm-7S-1P4"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SNk-k7-BaM"/>
                                     <barButtonItem style="plain" id="Tbf-1K-6UT">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="eHk-fN-rp0">
@@ -135,20 +139,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qeH-7A-lRN">
-                                <rect key="frame" x="40" y="220" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1oG-zJ-cQh">
+                                <rect key="frame" x="16" y="28" width="288" height="520"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1oG-zJ-cQh" firstAttribute="centerX" secondItem="JcL-dW-OT7" secondAttribute="centerX" id="0RJ-Cn-rcU"/>
+                            <constraint firstItem="1oG-zJ-cQh" firstAttribute="centerY" secondItem="JcL-dW-OT7" secondAttribute="centerY" id="BCc-UM-TRw"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="MKMapView" destination="qeH-7A-lRN" id="iGD-bf-wVa"/>
+                        <outlet property="MKMapView" destination="1oG-zJ-cQh" id="g2U-8H-E4r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JOD-zN-Wg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="116"/>
+            <point key="canvasLocation" x="1719.375" y="115.14084507042254"/>
         </scene>
         <!--Supplies View Controller-->
         <scene sceneID="vxV-zf-svg">
